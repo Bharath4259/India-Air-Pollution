@@ -1,0 +1,43 @@
+
+<div class="container">
+    <div class="block-heading">
+        <h2 class="text-info"> OVERVIEW </h2>
+        <!-- <p>search bar here... and show a default city below</p> -->
+    </div>
+    <div class="row align-items-center">
+        <div class="col-md-6">
+            <img class="img-thumbnail" src="assets/img/scenery/image5.jpg">
+        </div>
+        <div class="col-md-6">
+            <h3><%- city_name %></h3>
+            <div class="getting-started-info">
+                <!-- <p>- How city pollution is performing over the years
+                <br>- &nbsp; Major Businesses in the city / Industries
+                <br>- &nbsp; Population</p> -->
+                <% var last_year_data = data[0] %>
+
+                <h5> Oberved pollution measures for <%- city_name %> in year <%- last_year_data['year'] %> </h5>
+                <table class="table table-striped">
+                    <thead>
+                        <tr><th>Measure</th><th>Value</th></tr>
+                    </thead>
+                    <tbody>
+                        <tr><td> SO2 </td><td> <%- _.round( last_year_data['so2|mean'] , 2) %> </td></tr>
+                        <tr><td> NO2 </td><td> <%- _.round( last_year_data['no2|mean'] , 2) %> </td></tr>
+                        <tr><td> RSPM </td><td> <%- _.round( last_year_data['rspm|mean'] , 2) %> </td></tr>
+                    </tbody>
+                </table>
+                <div class="mt-5">
+                    <ul>
+                        <li>
+                            <% var rspm =  _.round( last_year_data['rspm|mean']) %>
+                            Respirable Suspended Particulate Matter in <%- city_name %> is at <b><%- rspm > 160 ? 'high' : rspm > 150? 'bit higher' : 'safe' %> level </b>.
+                            Where permissible level of RSPM is 100 for Residential areas and 150 for Industrial areas.
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>

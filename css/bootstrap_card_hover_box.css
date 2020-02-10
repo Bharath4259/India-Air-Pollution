@@ -1,0 +1,24 @@
+
+.box17{position:relative; background-color: #2c2c2c; color: #fff; border-radius: 6px;}
+.box17:after{content:"";width:100%;height:100%;background:rgb(2, 162, 221); border-radius: 6px; position:absolute;top:0;left:0;opacity:0;transition:all .5s ease 0s}
+.box17:hover:after{opacity:1}
+.box17 .box-header{width: 100%; height: 220px; padding-top: 27%; padding-left: 11%;}
+
+.box17 .box-content{position:absolute;transition:all .6s ease 0s; display: none; z-index: 1;}
+
+.box17 .box-content-0{top:0; margin-top: 5px; margin-left: 5px; font-weight: 400;}
+
+.box17 .box-content-1{width:100%;height:100%;list-style:none;padding:0; padding-top: 10%; margin:0 auto;position:absolute;top:0;left:0;}
+
+.box17 .box-content-2{width:100%;padding:20px 10px;background:rgba(0,0,0,.1);bottom:0px;left:0;}
+
+.box17:hover .box-content-0{display: block;}
+.box17:hover .box-content-1{display: block;}
+.box17:hover .box-content-2{display: block;}
+.box17:hover {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+.box17 .title{font-size:18px;font-weight:700;color:#fff;margin-top:0}
+.box17 .post{display:block;font-size:14px;color:#fff}
+@media only screen and (max-width:990px){.box17{margin-bottom:30px}
+}

@@ -1,0 +1,30 @@
+<div class="row mt-30">
+
+    <% console.log("template")%>
+
+    <% _.each(data, function(row){ %>
+
+        <div class="col-md-4 col-sm-6 my-2">
+            <div class="box17">
+                <div class="box-header">
+                    <h2> <%- row.location %> </h2>
+                    <span> <%- row.state %> </span>
+                </div>
+                <div class="box-content box-content-0">
+                    Details..
+                </div>
+                <div class="box-content box-content-1">
+                    <ul class="px-0">
+                        <li class="row px-5 my-1"> <div class="col-4"> SO2 : </div> <div class="col-8"> <%- _.round(row['so2|mean'], 2) %> </div> </li>
+                        <li class="row px-5 my-1"> <div class="col-4"> NO2 : </div> <div class="col-8"> <%- _.round(row['no2|mean'], 2) %> </div> </li>
+                        <li class="row px-5 my-1"> <div class="col-4"> RSPM : </div> <div class="col-8"> <%- _.round(row['rspm|mean'], 2) %> <span class="ml-1">mg </span>  </div> </li>
+                        <!-- <li class="row px-5 my-1"> <div class="col-4"> SPM : </div> <div class="col-8"> <%- _.round(row['spm|mean'], 2) %> <span class="ml-1">mg </span> </div> </li> -->
+                    </ul>
+                </div>
+                <div class="box-content box-content-2">
+                    <h3 class="title"> <%- row.location + ", "+ row.state %> </h3>
+                </div>
+            </div>
+        </div>
+
+    <% }) %>
